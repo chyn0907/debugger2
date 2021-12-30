@@ -15,4 +15,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
     - name: Waiting for debugger
-      uses: csexton/debugger-action@master
+      uses: mxschmitt/action-tmate@v3
