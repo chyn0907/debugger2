@@ -3,8 +3,6 @@ name: Build and push Docker image
 on:
   push:
   pull_request:
-  schedule:
-    - cron: '0 2 * * 0'
   workflow_dispatch:
 
 env:
@@ -25,6 +23,8 @@ jobs:
 
     - name: Clone repository
       uses: actions/checkout@v2
+      with:
+        repository: 'termux/termux-docker'
 
     - name: Setup binfmt_misc
       if: (matrix.CPU_ARCH == 'aarch64') || (matrix.CPU_ARCH == 'arm')
