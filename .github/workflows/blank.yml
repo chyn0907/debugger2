@@ -14,8 +14,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
-    - name: Setup binfmt_misc
-      run: docker run --rm --privileged aptman/qus -s -- -p aarch64 arm
+    # - name: Setup binfmt_misc
+    #   run: docker run --rm --privileged aptman/qus -s -- -p aarch64 arm
     - name: Waiting for debugger
       uses: mxschmitt/action-tmate@v3
 
