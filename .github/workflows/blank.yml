@@ -6,9 +6,11 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-lastest
     strategy:
        fail-fast: false
     steps:
